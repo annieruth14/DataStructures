@@ -5,9 +5,10 @@ import org.junit.Test;
 
 public class MyNodeTest {
 	MyNode myNode = null;
-
+	
+	// Linked list is not created. Values are just linked
 	@Test
-	public void givenNumbers_whenCreateLinkedList_ShouldReturnTrue() {
+	public void givenNumbers_whenLinked_ShouldPassLinkedListTest() {
 		MyNode<Integer> myFirst = new MyNode<>(56);
 		MyNode<Integer> mySecond = new MyNode<>(30);
 		MyNode<Integer> myThird = new MyNode<>(70);

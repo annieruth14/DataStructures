@@ -1,8 +1,8 @@
 package com.bridgelabz.test.datastructures;
 
-public class MyNode<T> {
+public class MyNode<T>  implements INode<T> {
 	private T key;
-	private MyNode next;
+	private INode next;
 
 	public MyNode(T key) {
 		super();
@@ -18,11 +18,11 @@ public class MyNode<T> {
 		this.key = key;
 	}
 
-	public MyNode getNext() {
+	public INode getNext() {
 		return next;
 	}
 
-	public void setNext(MyNode next) {
+	public void setNext(INode next) {
 		this.next = next;
 	}
 }
