@@ -47,4 +47,12 @@ public class MyLinkedList {
 			this.tail = newNode;
 		}
 	}
+
+	// Insert a node between given two nodes ie. Node after which you want to insert
+	// and the new node
+	public void insert(INode myNode, INode newNode) {
+		INode tempNode = myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
 }
