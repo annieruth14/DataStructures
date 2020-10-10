@@ -56,10 +56,21 @@ public class MyLinkedList {
 		newNode.setNext(tempNode);
 	}
 
-	// Pop a value
+	// Pop a value from the head
 	public INode pop() {
 		INode tempNode = this.head;
 		this.head = head.getNext();
+		return tempNode;
+	}
+
+	// Pop a value from tail
+	public INode popLast() {
+		INode tempNode = head;
+		while (tempNode.getNext() != tail) {
+			tempNode = tempNode.getNext();
+		}
+		this.tail = tempNode;
+		tempNode = tempNode.getNext();
 		return tempNode;
 	}
 }

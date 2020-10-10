@@ -64,4 +64,20 @@ public class MyLinkedListTest {
 		myLinkedList.printMyNodes();
 		Assert.assertEquals(56, popped.getKey());
 	}
+
+	@Test
+	public void givenNumbers_WhenPoppedFromEndOfLinkedList_shouldReturnTail() {
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.append(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		myLinkedList.printMyNodes();
+		INode popped = myLinkedList.popLast();
+		System.out.println("After popping : ");
+		myLinkedList.printMyNodes();
+		Assert.assertEquals(70, popped.getKey());
+	}
 }
