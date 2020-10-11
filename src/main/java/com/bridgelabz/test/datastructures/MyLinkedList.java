@@ -74,14 +74,28 @@ public class MyLinkedList {
 		return tempNode;
 	}
 
-	public boolean search(Integer Key) {
-		INode tempNode = head; 
+	public <T> boolean search(T Key) {
+		INode tempNode = head;
 		boolean searchResult = false;
 		while (tempNode.getKey() != Key) {
 			tempNode = tempNode.getNext();
 		}
-		if(tempNode.getKey() == Key)
+		if (tempNode.getKey() == Key)
 			return true;
 		return false;
+	}
+
+	public <K> boolean insertAfter(K Key, INode newNode) {
+		INode tempNode = head;
+		while (tempNode.getKey() != Key) {
+			tempNode = tempNode.getNext();
+		}
+		if (tempNode.getKey() == Key) {
+			newNode.setNext(tempNode.getNext());
+			tempNode.setNext(newNode);
+			return true;
+		}
+		else
+			return false;
 	}
 }
