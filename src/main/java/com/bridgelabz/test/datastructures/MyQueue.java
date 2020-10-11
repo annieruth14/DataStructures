@@ -10,4 +10,12 @@ public class MyQueue {
 	public void enQueue(INode newNode) {
 		myLinkedList.append(newNode);
 	}
+
+	public void printQueue() {
+		myLinkedList.printMyNodes();
+	}
+
+	public INode deQueue() {
+		return myLinkedList.pop();
+	}
 }
