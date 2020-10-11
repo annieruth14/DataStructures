@@ -108,4 +108,19 @@ public class MyLinkedListTest {
 				&& myLinkedList.head.getNext().getNext().equals(myThirdNode) && myLinkedList.tail.equals(myFourthNode);
 		Assert.assertTrue(Rresult);
 	}
+	@Test
+	public void givenNumbers_WhenFindTheGivenKey_shouldDeleteKey() {
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(40);
+		MyNode<Integer> myFourthNode = new MyNode<>(70);
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.append(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		myLinkedList.append(myFourthNode);
+		int sizeOfList = myLinkedList.delete(mySecondNode);
+		System.out.println(sizeOfList);
+		Assert.assertEquals(sizeOfList, 3);
+	}
 }
