@@ -80,4 +80,17 @@ public class MyLinkedListTest {
 		myLinkedList.printMyNodes();
 		Assert.assertEquals(70, popped.getKey());
 	}
+	
+	@Test
+	public void givenNumbers_WhenFindTheGivenKey_shouldReturnKey() {
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.append(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		Boolean searchResult = myLinkedList.search(mySecondNode.getKey());
+		Assert.assertTrue(searchResult);
+	}
 }
