@@ -37,7 +37,7 @@ public class MyLinkedHashMapTest {
 			// System.out.println(value);
 			myLinkedHashMap.add(word, value);
 		}
-		boolean result = myLinkedHashMap.remove("putting");
+		boolean result = myLinkedHashMap.remove("avoidable");
 		Assert.assertTrue(result);
 	}
 }
