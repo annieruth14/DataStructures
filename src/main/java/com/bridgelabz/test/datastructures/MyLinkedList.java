@@ -1,6 +1,6 @@
 package com.bridgelabz.test.datastructures;
 
-public class MyLinkedList {
+public class MyLinkedList<K> {
 	public INode head;
 	public INode tail;
 
@@ -74,15 +74,15 @@ public class MyLinkedList {
 		return tempNode;
 	}
 
-	public <T> boolean search(T Key) {
-		INode tempNode = head;
-		boolean searchResult = false;
-		while (tempNode.getKey() != Key) {
+	public INode<K> search(K Key) {
+		INode<K> tempNode = head;
+		while(tempNode != null && tempNode.getNext() != null) {
+			if (tempNode.getKey().equals(Key)) {
+				return tempNode ;
+			}
 			tempNode = tempNode.getNext();
 		}
-		if (tempNode.getKey() == Key)
-			return true;
-		return false;
+		return null;
 	}
 
 	public <K> boolean insertAfter(K Key, INode newNode) {

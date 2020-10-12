@@ -88,8 +88,8 @@ public class MyLinkedListTest {
 		myLinkedList.append(myFirstNode);
 		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
-		Boolean searchResult = myLinkedList.search(mySecondNode.getKey());
-		Assert.assertTrue(searchResult);
+		INode searchResult = myLinkedList.search(mySecondNode.getKey());
+		Assert.assertEquals(searchResult.getKey() , 30);
 	}
 
 	@Test
