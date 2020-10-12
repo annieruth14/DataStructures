@@ -19,6 +19,7 @@ public class MyHashMapTest {
 			myHashMap.add(word , value);
 		}
 		int frequency = myHashMap.get("to");
+		//myHashMap.print();
 		System.out.println(myHashMap);
 		Assert.assertEquals(2, frequency);
 	}

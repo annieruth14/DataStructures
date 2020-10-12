@@ -27,4 +27,8 @@ public class MyHashMap<K, V> {
 	public String toString() {
 		return "MyHashMapNodes {" + myLinkedList + '}';
 	}
+	
+	public void print() {
+		this.myLinkedList.printMyNodes();
+	}
 }

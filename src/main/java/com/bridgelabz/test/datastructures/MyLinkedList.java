@@ -118,5 +118,8 @@ public class MyLinkedList<K> {
 		}
 		return counter;
 	}
-
-}
+	@Override
+	public String toString() {
+		return "MyLinkedListNodes{" + head + '}';
+	}
+}	
