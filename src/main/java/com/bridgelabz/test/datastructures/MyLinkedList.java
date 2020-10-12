@@ -73,16 +73,27 @@ public class MyLinkedList<K> {
 		tempNode = tempNode.getNext();
 		return tempNode;
 	}
+	
+	public boolean remove(K Key) {
+		INode<K> tempNode = head;
+		while(tempNode != null && tempNode.getNext() != null) {
+			if (tempNode.getNext().getKey().equals(Key)) {
+				tempNode.setNext(tempNode.getNext().getNext());
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public INode<K> search(K Key) {
 		INode<K> tempNode = head;
-		while(tempNode != null && tempNode.getNext() != null) {
+		while(tempNode != null) {
 			if (tempNode.getKey().equals(Key)) {
 				return tempNode ;
 			}
 			tempNode = tempNode.getNext();
 		}
-		return null;
+		return tempNode;
 	}
 
 	public <K> boolean insertAfter(K Key, INode newNode) {
